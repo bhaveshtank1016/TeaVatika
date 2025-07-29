@@ -1,32 +1,34 @@
 import React, { useState } from "react";
 import { FaSearchPlus } from "react-icons/fa";
+import hero11 from "../assets/hero11.png";
+import hero12 from "../assets/hero13.png";
+import hero13 from "../assets/hero14.png";
 
 const projectData = [
   {
     id: 1,
     title: "Tea Fields in Assam",
     category: "Fields",
-    image:
-      "https://static.wixstatic.com/media/d1f9cb_ba03d1eda7e84f7ea72dfbafe0f45ecd~mv2.png/v1/fill/w_568,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d1f9cb_ba03d1eda7e84f7ea72dfbafe0f45ecd~mv2.png",
+    image: hero11,
     description: "Lush tea gardens under morning mist in Assam.",
   },
   {
     id: 2,
     title: "Modern Tea Factory",
     category: "Factory",
-    image: "https://t3.ftcdn.net/jpg/12/14/88/28/240_F_1214882884_EaLklt1eIrSxSL1299ctPrEpxktxwGeB.jpg",
+    image: hero12,
     description: "Advanced tea processing plant using latest technology.",
   },
   {
     id: 3,
     title: "International Tea Exhibition",
     category: "Exhibitions",
-    image: "https://t4.ftcdn.net/jpg/09/23/69/05/240_F_923690593_HrK6rTZCZJSKmVMDWpjtRuR1e6eH8Gvc.jpg",
+    image: hero13,
     description: "Showcasing our premium blends at a global expo.",
   },
 ];
 
-const categories = ["All", "Washing", "Services", "Polish"];
+const categories = ["All", "Fields", "Factory", "Exhibitions"];
 
 const ProjectGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -40,13 +42,13 @@ const ProjectGallery = () => {
   return (
     <section
       id="ProjectGallery"
-      className="bg-black  py-20 px-6 transition-colors duration-300"
+      className="bg-black py-20 px-6 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+        <h2 className="text-3xl font-bold text-center mb-4 text-white">
           Project Gallery
         </h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-10">
+        <p className="text-center text-gray-300 mb-10">
           Explore some of our recent projects across various services.
         </p>
 

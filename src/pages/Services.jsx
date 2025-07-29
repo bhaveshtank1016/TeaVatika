@@ -1,5 +1,5 @@
 import React from "react";
-import car from "../assets/typesoftea.jpg";
+import hhero from "../assets/hero13.png";
 
 const Services = () => {
   return (
@@ -10,7 +10,7 @@ const Services = () => {
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/3">
           <img
-            src={car}
+            src={hhero}
             alt="Fabrication Services"
             className="w-full h-auto rounded-2xl ml-3 object-contain"
           />

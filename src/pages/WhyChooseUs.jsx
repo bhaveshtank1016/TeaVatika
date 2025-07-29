@@ -1,56 +1,32 @@
-import { BadgeCheck, Leaf, FlaskConical, Users } from "lucide-react";
+import React from "react";
+import bgVideo from "../assets/video/vvv.mp4";
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 bg-black text-white text-center">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4">
-          Why <span className="text-green-600">Choose Us?</span>
-        </h2>
-        <p className="text-gray-300 mb-12">
-          We don’t just produce tea, we cultivate trust through ethical sourcing,
-          rigorous testing, and passionate craftsmanship.
-        </p>
+    <div className="relative w-full h-130 overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src={bgVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Quality Control */}
-          <div className="flex flex-col items-center">
-            <BadgeCheck className="text-green-600 mb-4 w-10 h-10" />
-            <h3 className="font-semibold text-lg">Quality Control</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Multi-layered inspection from leaf to label to ensure excellence.
-            </p>
-          </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-          {/* Ethical Sourcing */}
-          <div className="flex flex-col items-center">
-            <Leaf className="text-green-600 mb-4 w-10 h-10" />
-            <h3 className="font-semibold text-lg">Ethical Sourcing</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Partnering with farms that practice fair trade and sustainability.
-            </p>
-          </div>
-
-          {/* Tea Lab */}
-          <div className="flex flex-col items-center">
-            <FlaskConical className="text-green-600 mb-4 w-10 h-10" />
-            <h3 className="font-semibold text-lg">Tea Lab Testing</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Each batch tested for flavor accuracy, purity, and aroma.
-            </p>
-          </div>
-
-          {/* Tea Tasters */}
-          <div className="flex flex-col items-center">
-            <Users className="text-green-600 mb-4 w-10 h-10" />
-            <h3 className="font-semibold text-lg">Experienced Tasters</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Decades of experience in selecting and blending world-class teas.
-            </p>
-          </div>
-        </div>
+      {/* Content on top of video */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Welcome to Our Impact
+        </h1>
+        <p className="text-lg md:text-xl">Your journey begins here</p>
       </div>
-    </section>
+    </div>
   );
 };
 

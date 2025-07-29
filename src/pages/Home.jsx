@@ -12,23 +12,50 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import stairImage1 from "../assets/tea4.jpg";
-import stairImage2 from "../assets/lemon tea.jpg";
-import stairImage3 from "../assets/tea2.avif";
+// hero slide imgs
+import heroImg1 from "../assets/baner.jpg";
+import heroImg2 from "../assets/banner.png";
+import heroImg3 from "../assets/banner.png";
+
+import stairImage1 from "../assets/hero13.png";
+import stairImage2 from "../assets/hero13.png";
+import stairImage3 from "../assets/hero13.png";
 
 export default function Home() {
   return (
     <div className="w-full scroll-smooth">
       {/* Hero Section */}
-      <section
-        id="hero"
-        className="relative w-full h-screen bg-cover bg-fixed bg-center"
-        style={{ backgroundImage: `url(${bgHero})` }}
-      >
+      <section id="hero" className="relative w-full h-[600px] overflow-hidden">
+        {/* Background Swiper */}
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className="w-full h-full"
+          >
+            {[heroImg1, heroImg2, heroImg3].map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-blue-900 opacity-60 z-10"></div>
 
+        {/* Foreground Content */}
         <div className="relative z-20 flex flex-col md:flex-row justify-between items-center h-full px-6 max-w-7xl mx-auto text-white">
-          {/* LEFT */}
           <div className="mt-24 md:mt-0 max-w-xl text-center md:text-left">
             <p className="text-yellow-400 text-lg font-bold">
               WELCOME TO CHAIVATIKA CENTER
@@ -47,8 +74,6 @@ export default function Home() {
               DISCOVER MORE
             </button>
           </div>
-
-          {/* RIGHT */}
           <div className="mt-10 md:mt-0"></div>
         </div>
       </section>
@@ -126,16 +151,9 @@ export default function Home() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            <div className="absolute top-4 left-4 bg-yellow-400 text-white px-4 py-2 text-sm font-bold rounded shadow">
-              20+
-              <br />
-              Years of Experience
-            </div>
           </div>
         </div>
       </section>
     </div>
   );
 }
-

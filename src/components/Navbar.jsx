@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 
         {/* Logo */}
-        <h1 className="text-black font-bold text-xl">CHAIVATIKA </h1>
+        <h1 className="text-black font-bold text-xl">PUSHAAN</h1>
 
         {/* Mobile Button */}
         <div className="lg:hidden">
