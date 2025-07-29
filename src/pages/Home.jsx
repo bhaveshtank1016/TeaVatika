@@ -58,7 +58,7 @@ export default function Home() {
         <div className="relative z-20 flex flex-col md:flex-row justify-between items-center h-full px-6 max-w-7xl mx-auto text-white">
           <div className="mt-24 md:mt-0 max-w-xl text-center md:text-left">
             <p className="text-yellow-400 text-lg font-bold">
-              WELCOME TO CHAIVATIKA CENTER
+              WELCOME TO PUSHAAN TEA CENTER
             </p>
             <h1 className="text-4xl md:text-5xl font-bold leading-snug mt-2">
               From Garden to Cup – Pure & Authentic Tea

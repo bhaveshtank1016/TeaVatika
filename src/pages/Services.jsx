@@ -7,8 +7,8 @@ const Services = () => {
       id="services"
       className="px-6 py-16 bg-gradient-to-b from-black via-gray-900 to-black"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/3">
+      <div className="flex flex-col md:flex-row items-center justify-between ">
+        <div className="md:w-1/3 ml-20">
           <img
             src={hhero}
             alt="Fabrication Services"

@@ -16,8 +16,8 @@ export default function Footer() {
         {/* Brand Section */}
         <div>
           <h2 className="text-2xl font-bold flex items-center gap-2">
-            <span className="bg-yellow-400 text-black px-2 py-1 rounded">C</span>{" "}
-            CHAIVATIKA
+            <span className="bg-yellow-400 text-black px-2 py-1 rounded">P</span>{" "}
+            PUSHAAN
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-white/80">
             From handpicked leaves to expertly crafted blends — we deliver purity,
